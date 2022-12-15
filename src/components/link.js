@@ -69,7 +69,7 @@ export default {
         : this.exactActiveClass
 
     const compareTarget = route.redirectedFrom
-      ? createRoute(null, normalizeLocation(route.redirectedFrom), null, router)
+      ? createRoute(null, normalizeLocation(route.redirectedFrom, null, null, router), null, router)
       : route
 
     classes[exactActiveClass] = isSameRoute(current, compareTarget, this.exactPath)
